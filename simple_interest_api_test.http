@@ -1,0 +1,34 @@
+### Calculate simple interest (valid request)
+POST http://127.0.0.1:5000/simple-interest
+Content-Type: application/json
+
+{
+  "principal": 1000,
+  "rate": 5,
+  "time": 2
+}
+
+### Calculate simple interest (missing field)
+POST http://127.0.0.1:5000/simple-interest
+Content-Type: application/json
+
+{
+  "principal": 1000,
+  "rate": 5
+}
+
+### Calculate simple interest (invalid type)
+POST http://127.0.0.1:5000/simple-interest
+Content-Type: application/json
+
+{
+  "principal": "abc",
+  "rate": 5,
+  "time": 2
+}
+
+### OpenAPI spec
+GET http://127.0.0.1:5000/openapi.json
+
+### Swagger Docs
+GET http://127.0.0.1:5000/docs
